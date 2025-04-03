@@ -1,10 +1,12 @@
-#include "Foco.hpp"
 #include "Serie.hpp"
 #include <iostream>
+#include <string>
+#include <thread>
 #include <ftxui/screen/screen.hpp>
 #include <ftxui/dom/elements.hpp>
 using namespace std;
 using namespace ftxui;
+
 
 
 int main(int argc, char const *argv[])
@@ -15,20 +17,20 @@ int main(int argc, char const *argv[])
         Dimension::Full()
     );
 
-    auto documento = vbox(
-        spinner(21,1
-        )
+    int fotograma = 0;
+    string resetPosition;
+    while(true) {
+        auto documento = vbox(
+            spinner(21,fotograma)
     );
-
     Render(Pantalla, documento);
-
+    cout << resetPosition;
     Pantalla.Print();
+    resetPosition = Pantalla.ResetPosition();
+    fotograma++;
 
-
-
-
-
-
+    std::this_thread::sleep_for(0.1s);
+}
 
     // Foco foco1;
     // Foco foco2;

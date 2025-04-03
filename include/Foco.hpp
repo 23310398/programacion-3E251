@@ -3,7 +3,7 @@
 class Foco  
 {
 private:
-        EstadoFoco estado;
+    EstadoFoco estado;
 public:
     Foco(){
         estado = EstadoFoco::Apagado;
@@ -35,6 +35,6 @@ public:
             estado== EstadoFoco::Apagado;
     }
     else{
-
     }
+}
 };
