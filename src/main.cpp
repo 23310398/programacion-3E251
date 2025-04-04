@@ -18,6 +18,11 @@ int main(int argc, char const *argv[])
     );
 
     int fotograma = 0;
+    //float hi = 5;
+    //float t = fotograma
+    //float g = 9.81
+    //float hf = (g*t*t)/2
+
     string resetPosition;
     while(true) {
         auto documento = vbox(
