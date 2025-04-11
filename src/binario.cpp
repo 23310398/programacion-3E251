@@ -42,7 +42,7 @@ ifstream archivolectura("binario.bin", ios::binary);
     string linea;
     while(archivolectura.read(reinterpret_cast<char*>(&p),sizeof(Persona)))
     {
-        cout << "NOMBRE: " << p.nombre << " ,EDAD: " << p.edad << endl;
+        cout << "NOMBRE: " << p.nombre << ", EDAD: " << p.edad << endl;
     }
 
     return 0;
